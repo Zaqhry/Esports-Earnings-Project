@@ -124,7 +124,6 @@ FROM ESL
 
 --Average earnings per genre 
 
-
 SELECT Genre,
        ROUND(AVG(TotalUSDPrize),2) AvgEarnings 
 FROM ESL 
@@ -134,7 +133,6 @@ FROM ESL
 
 
 --Total earnings per genre 
-
 
 SELECT Genre,
        ROUND(SUM(TotalUSDPrize),2) TotalEarnings 
@@ -265,7 +263,6 @@ WHERE Game = 'Overwatch'
 
 
 --Top 5 Highest Earners in Heroes of the Storm 
-
 
 SELECT TOP 5 FirstName,
              LastName,
