@@ -51,44 +51,34 @@ FROM ESL
 --Total prize per country 
 
 SELECT Country,
-       ROUND(SUM(TotalUSDPrize),2) Prize
+       ROUND(SUM(TotalUSDPrize),2) TotalEarnings
 FROM ESL 
   GROUP BY Country
-  ORDER BY Prize DESC
+  ORDER BY TotalEarnings DESC
 
 
 
 --Average earnings per country
 
 SELECT Country,
-       ROUND(AVG(TotalUSDPrize),2) Prize
+       ROUND(AVG(TotalUSDPrize),2) AvgEarnings
 FROM ESL 
   GROUP BY Country
-  ORDER BY Prize DESC
-
-
-
---Highest earnings per country 
-
-SELECT Country,
-       ROUND(MAX(TotalUSDPrize),2) Prize
-FROM ESL 
-  GROUP BY Country
-  ORDER BY Prize DESC
-
-
-
+  ORDER BY AvgEarnings DESC
+  
+  
+  
 --Player with the highest earnings 
 
 SELECT FirstName,
        LastName,
        Gamertag,
-       ROUND(SUM(TotalUSDPrize),2) Prize
+       ROUND(SUM(TotalUSDPrize),2) TotalEarnings
 FROM ESL 
   GROUP BY FirstName,
            LastName,
            Gamertag
-  ORDER BY Prize DESC
+  ORDER BY TotalEarnings DESC
 
 
 
@@ -112,20 +102,20 @@ FROM ESL
 --Average earnings per game 
 
 SELECT Game,
-       ROUND(AVG(TotalUSDPrize),2) Prize
+       ROUND(AVG(TotalUSDPrize),2) AvgEarnings
 FROM ESL 
   GROUP BY Game 
-  ORDER BY Prize DESC
+  ORDER BY AvgEarnings DESC
 
 
 
 --Total earnings per game 
 
 SELECT Game,
-       ROUND(SUM(TotalUSDPrize),2) Prize
+       ROUND(SUM(TotalUSDPrize),2) TotalEarnings
 FROM ESL 
   GROUP BY Game 
-  ORDER BY Prize DESC
+  ORDER BY TotalEarnings DESC
 
 
 
