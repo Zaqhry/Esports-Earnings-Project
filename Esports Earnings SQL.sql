@@ -22,6 +22,13 @@ FROM ESL
 
 
 
+--# of Country
+
+SELECT DISTINCT(Country) 
+FROM ESL 
+
+
+
 --# of players per each game 
 
 SELECT Game,
