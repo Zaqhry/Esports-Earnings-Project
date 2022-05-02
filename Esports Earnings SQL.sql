@@ -22,7 +22,7 @@ FROM ESL
 
 
 
---# of Country
+--# of Countries
 
 SELECT DISTINCT(Country) 
 FROM ESL 
@@ -89,7 +89,7 @@ FROM ESL
 
 
 
---Average earnings per player across a distinct game 
+--Average earnings per player across a specific game 
 
 SELECT Game,
        ROUND(AVG(TotalUSDPrize),2) AvgEarnings 
